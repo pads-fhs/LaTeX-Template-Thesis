@@ -11,6 +11,8 @@
 \usepackage{helvet}
 \usepackage{listings}
 \usepackage[numbers]{natbib}
+\input{header/hyperrefstyle}
+\usepackage{scrhack}
 \bibliographystyle{alphadin}
 
 \usepackage{lastpage}
@@ -18,7 +20,7 @@
 \usepackage{fancyhdr}
 
 % define the programming language
-\input{lststyles}
+\input{header/lststyles}
 
 %set default pagestyle
 \pagestyle{empty}
@@ -60,29 +62,33 @@
 % input the title
 \input{title}
 
-\input{abstract}
+\input{content/abstract}
 
 % load the preamble
-\input{preamble}
+\input{header/preamble}
 
 % loads the fancy pagestyle for register part
-\input{fancyRegisterPart}
+\input{header/fancyRegisterPart}
 
 % create the registers
-\tableofcontents\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+\newpage
 
 % set pagenumbering to arabic(1 2 3 4)
 \pagenumbering{arabic}
 % loads the fancy pagestyle for main part
-\input{fancyMainPart}
+\input{header/fancyMainPart}
 
 % #####
 % # load the chapter from the files
 % #
 % # TODO: create new chapter
 % #####
-\input{chapter1}
-\input{chapter2}
+\input{content/chapter1}
+\input{content/chapter2}
 
 % #####
 % # load the bibliography
@@ -92,14 +98,11 @@
 % #####
 % # load the appendix from the files
 % #####
-\input{appendix}
+\input{content/appendix}
 
-\listoffigures
-\listoftables
-\lstlistoflistings
 % #####
 % # load the sworn declaration
 % #####
-\input{declaration}
+\input{content/declaration}
 % end of the document
 \end{document}
