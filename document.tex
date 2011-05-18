@@ -2,7 +2,7 @@
 \documentclass[12pt, bibtotoc, a4paper, abstracton]{scrreprt}
 
 % define used packages
-\usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
+\usepackage[left=4.0cm, right=2.0cm, top=2.5cm, bottom=2.5cm]{geometry}
 \usepackage{bibgerm}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -30,9 +30,10 @@
 % # START config area
 % #
 % #####
+\renewcommand{\baselinestretch}{1.50}
 
 \newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
-\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastPage}}
+\newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastContentPage}}
 \newcommand{\DATE}[0]{1.1.2012}
 
 \newcommand{\AUTHOR}[0]{Max Müller}
@@ -76,7 +77,8 @@
 \listoftables
 \lstlistoflistings
 \newpage
-
+\newcounter{romanCount}
+\setcounter{romanCount}{\value{page}}
 % set pagenumbering to arabic(1 2 3 4)
 \pagenumbering{arabic}
 % loads the fancy pagestyle for main part
@@ -89,12 +91,16 @@
 % #####
 \input{content/chapter1}
 \input{content/chapter2}
-
+\label{LastContentPage}
 % #####
 % # load the bibliography
 % #####
-\bibliography{bibliography}
 
+
+\bibliography{bibliography}
+\input{header/fancyRegisterPart}
+\pagenumbering{Roman}
+\setcounter{page}{\value{romanCount}}
 % #####
 % # load the appendix from the files
 % #####
