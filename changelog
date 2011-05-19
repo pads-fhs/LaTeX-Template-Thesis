@@ -1,0 +1,9 @@
+﻿glossar hinzugefügt
+zeilenabstand auf 1.5 erhöht -> fachbereichs interne norm (/PUB/jacob/Praktikum/0804Merkblatt_Dipl-Arb_RP.pdf)
+seitenabstände an fh norm angepasst
+verzeichnisse an den anfang des dokuments geschoben
+hyperref eingebunden -> bessere navigation in pdf version (günstig bei der verteidigung der arbeit)
+srchack eingebunden -> beseitigt inkompartibilitäten anderer packages zu KOMA Script
+pagenum in allen verzeichnissen ist römisch
+ordnerstruktur überarbeitet
+makefile angepasst

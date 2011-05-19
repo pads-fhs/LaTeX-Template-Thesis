@@ -5,6 +5,6 @@ document:
 	pdflatex document
 	pdflatex document
 clean:
-	rm -f *.aux *.bbl *.blg *.lof *.lot *.log *.toc *.lol
+	rm -f *.aux *.bbl *.blg *.lof *.lot *.log *.toc *.lol *.g* *.ist *.acn *.out
 cleaner: clean
 	rm -f *.pdf
