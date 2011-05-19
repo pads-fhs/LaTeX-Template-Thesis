@@ -1,5 +1,6 @@
 document:
 	pdflatex document
+	makeindex -s document.ist -t document.glg -o document.gls document.glo
 	bibtex document
 	pdflatex document
 	pdflatex document

@@ -13,7 +13,9 @@
 \usepackage[numbers]{natbib}
 \input{header/hyperrefstyle}
 \usepackage{scrhack}
+\input{header/glossar}
 \bibliographystyle{alphadin}
+\usepackage[babel,german=quotes]{csquotes}
 
 \usepackage{lastpage}
 
@@ -31,10 +33,9 @@
 % #
 % #####
 \renewcommand{\baselinestretch}{1.50}
-
 \newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
 \newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastContentPage}}
-\newcommand{\DATE}[0]{1.1.2012}
+\newcommand{\DATE}[0]{\today}
 
 \newcommand{\AUTHOR}[0]{Max Müller}
 \newcommand{\MATNR}[0]{123456}
@@ -76,6 +77,8 @@
 \listoffigures
 \listoftables
 \lstlistoflistings
+\newpage
+\printglossary
 \newpage
 \newcounter{romanCount}
 \setcounter{romanCount}{\value{page}}
