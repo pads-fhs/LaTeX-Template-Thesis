@@ -32,7 +32,7 @@
 % # START config area
 % #
 % #####
-%\renewcommand{\baselinestretch}{1.50}
+%\renewcommand{\baselinestretch}{1.50} %zeilenabstand
 \newcommand{\HEADER}[0]{Fachhochschule Schmalkalden SS 2011}
 \newcommand{\PAGENUMBERS}[0]{Seite \pagemark \ von \pageref{LastContentPage}}
 \newcommand{\DATE}[0]{\today}
@@ -59,7 +59,6 @@
 
 % starting the document
 \begin{document}
-
 % set pagenumbering to roman(I II III IV)
 \pagenumbering{Roman}
 % input the title
@@ -68,7 +67,7 @@
 \input{content/abstract}
 
 % load the preamble
-\input{header/preamble}
+\input{content/preamble}
 
 % loads the fancy pagestyle for register part
 \input{header/fancyRegisterPart}
@@ -76,13 +75,14 @@
 % create the registers
 \tableofcontents
 \listoffigures
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoftables
-\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 \lstlistoflistings
-\addcontentsline{toc}{section}{Listingverzeichnis}
+\addcontentsline{toc}{chapter}{Listingverzeichnis}
 \newpage
 \printglossary
+\addcontentsline{toc}{chapter}{Glossar}
 \newpage
 \newcounter{romanCount}
 \setcounter{romanCount}{\value{page}}
