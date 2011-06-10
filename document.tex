@@ -19,7 +19,17 @@
 
 \usepackage{lastpage}
 
+% advanced tables
+\usepackage{array}
+
+% header and footer
 \usepackage{fancyhdr}
+
+% links
+\usepackage{url}
+
+% mathematical formulas
+\usepackage{amsmath, amssymb}
 
 % define the programming language
 \input{header/lststyles}
@@ -40,7 +50,8 @@
 \newcommand{\AUTHOR}[0]{Max Müller}
 \newcommand{\MATNR}[0]{123456}
 \newcommand{\STREET}[0]{Musterstraße 11}
-\newcommand{\TOWN}[0]{12345 Musterstadt}
+\newcommand{\ZIP}[0]{12345}
+\newcommand{\TOWN}[0]{Musterstadt}
 
 \newcommand{\REFERENT}[0]{Prof. Dr. Marianne Musterfrau}
 \newcommand{\COREFERENT}[0]{Prof. Dr. Max Mustermann}
@@ -99,6 +110,11 @@
 \input{content/chapter1}
 \input{content/chapter2}
 \label{LastContentPage}
+\newpage
+
+% loads the fancy pagestyle for register part
+\input{header/fancyRegisterPart}
+
 % #####
 % # load the bibliography
 % #####
