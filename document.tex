@@ -10,7 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
-\usepackage{helvet}
+\usepackage{lmodern}
 \usepackage{listings}
 \usepackage[numbers]{natbib}
 \input{header/hyperrefstyle}
@@ -31,14 +31,25 @@
 % links
 \usepackage{url}
 
+% internal links
+\usepackage[colorlinks=true ,linkcolor=black,
+			anchorcolor=black ,citecolor=black ,filecolor=black,
+			menucolor=black ,urlcolor=black]{hyperref}
+
 % mathematical formulas
 \usepackage{amsmath, amssymb}
+
+% to include images side by side
+\usepackage{subfigure}
 
 % define the programming language
 \input{header/lststyles}
 
 %set default pagestyle 
 \pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
 
 % #####
 % #
@@ -57,7 +68,7 @@
 \newcommand{\TOWN}[0]{Musterstadt}
 
 \newcommand{\REFERENT}[0]{Prof. Dr. Marianne Musterfrau}
-\newcommand{\COREFERENT}[0]{Prof. Dr. Max Mustermann}
+\newcommand{\KOREFERENT}[0]{Prof. Dr. Max Mustermann}
 
 \newcommand{\TITLE}[0]{Thema}
 \newcommand{\COURSE}[0]{Studiengang}
