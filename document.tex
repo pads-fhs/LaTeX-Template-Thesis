@@ -1,6 +1,8 @@
 % define documentclass
-\documentclass[12pt, bibliography=totoc, a4paper, abstracton, numbers=noenddot]{scrreprt}
-
+\documentclass[12pt, bibtotoc, a4paper, abstracton,final]{scrreprt}
+% absatz abstand
+\parskip 12pt
+\parindent 0pt
 % define used packages
 \usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
 \usepackage{bibgerm}
@@ -11,7 +13,7 @@
 \usepackage{lmodern}
 \usepackage{listings}
 \usepackage[numbers]{natbib}
-\input{header/hyperrefstyle}
+%\input{header/hyperrefstyle}
 \usepackage{scrhack}
 \input{header/glossar}
 \bibliographystyle{alphadin}
