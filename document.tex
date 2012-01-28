@@ -3,6 +3,19 @@
 % absatz abstand
 \parskip 12pt
 \parindent 0pt
+
+%floatplatzierung
+\renewcommand{\floatpagefraction}{.6}% vorher: .5 
+\renewcommand{\textfraction}{.15} % vorher: .2 
+\renewcommand{\topfraction}{.8}     % vorher: .7 
+\renewcommand{\bottomfraction}{.5}  % vorher: .3 
+\setcounter{topnumber}{3} % vorher: 2 
+\setcounter{bottomnumber}{1} % vorher: 1 
+\setcounter{totalnumber}{5} % vorher: 3
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+\setcapindent{1em}
 % define used packages
 \usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
 \usepackage{bibgerm}
@@ -13,7 +26,7 @@
 \usepackage{lmodern}
 \usepackage{listings}
 \usepackage[numbers]{natbib}
-%\input{header/hyperrefstyle}
+
 \usepackage{scrhack}
 \input{header/glossar}
 \bibliographystyle{alphadin}
@@ -27,9 +40,6 @@
 
 % header and footer
 \usepackage{fancyhdr}
-
-% links
-\usepackage{url}
 
 % internal links
 \usepackage[colorlinks=true ,linkcolor=black,
