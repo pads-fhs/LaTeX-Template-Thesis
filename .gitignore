@@ -17,3 +17,11 @@ tmp/
 *.nls
 *.pdf
 *.toc
+*.acn
+*.glg
+*.glo
+*.ist
+*.out
+*.gls
+*.synctex.gz
+document.pdf
