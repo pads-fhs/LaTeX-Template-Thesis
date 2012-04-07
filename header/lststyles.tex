@@ -84,17 +84,22 @@
  }
 }
 \newcommand{\lstsethtml}{
+
  \lstset{language=HTML,
+%        alsoletter={<,>,-,!},
+        morekeywords={div,section,header,footer,p,a},
         breaklines=true,
-        commentstyle=\textit,
-        keywordstyle=\bfseries,
-        basicstyle=\ttfamily,
-        stringstyle=\ttfamily,
+        commentstyle=\textit\color{green},
+        keywordstyle=\bfseries\color{violet},
+        basicstyle=\ttfamily\color{black},
+        stringstyle=\ttfamily\color{blue},
+        emph={id,class,align,type,name,data-role,href},
+        emphstyle=\bfseries\color{orange},
         showstringspaces=false,
         frame=single,
-        tabsize=2
-        %%linewidth=\textwidth,captionpos=b
-        %numbers=left, stepnumber=5, numbersep=10pt
+        tabsize=2,
+        linewidth=\textwidth,captionpos=b,
+        numbers=left,stepnumber=1,numbersep=10pt
  }
 }
 \newcommand{\lstsetphp}{
@@ -148,33 +153,41 @@
   morestring=[b]',
   morestring=[b]"
 }
-\newcommand{\lstsetjavascript}{
-  \lstset{
-		language=JavaScript,
-		breaklines=true,
-		commentstyle=\textit,
-		basicstyle=\ttfamily,
-		keywordstyle=\bfseries,
-		stringstyle=\ttfamily,
-		showstringspaces=false,
-		frame=single,
-		tabsize=2
-  }
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{gray}\bfseries,
+  identifierstyle=\color{black},
+  emph={id},
+  emphstyle=\bfseries\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/**}{*/},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{gray}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
 }
-\newcommand{\lstsetxml}{
- \lstset{language=XML,
-        breaklines=true,
-        commentstyle=\sffamily,
-        keywordstyle=\bfseries,
-        basicstyle=\sffamily,
-        showstringspaces=false,
-        stringstyle=\ttfamily,
-        frame=single,
-        tabsize=2,
-        literate=
-        %linewidth=\textwidth,captionpos=b
-        %numbers=left, stepnumber=5, numbersep=10pt
- }
+
+\newcommand{\lstsetjavascript}{
+
+  \lstset{
+     language=JavaScript,
+     %backgroundcolor=\color{lightgray},
+     extendedchars=true,
+     basicstyle=\footnotesize\ttfamily,
+     showstringspaces=false,
+     showspaces=false,
+     numbers=left,
+     numberstyle=\footnotesize,
+     numbersep=9pt,
+     tabsize=2,
+     breaklines=true,
+     showtabs=false,
+     captionpos=b
+  }
 }
 \lstdefinelanguage{CSharp}{
  morekeywords = {abstract,event,new,struct,as,explicit,%
