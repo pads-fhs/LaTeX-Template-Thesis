@@ -17,3 +17,4 @@ tmp/
 *.nls
 *.pdf
 *.toc
+!images/Logo_dt.pdf
