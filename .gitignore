@@ -25,3 +25,6 @@ document.pdf
 *.out
 *.glo
 *.dvi
+*~
+*.acr
+*.alg

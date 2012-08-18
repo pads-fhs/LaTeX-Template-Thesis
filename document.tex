@@ -31,7 +31,7 @@
 \usepackage{listings}
 \usepackage[numbers]{natbib}
 
-\usepackage{scrhack}
+
 \input{header/glossar}
 \bibliographystyle{alphadin}
 \usepackage[babel,german=quotes]{csquotes}
@@ -106,6 +106,7 @@
 % #
 % #####
 
+\usepackage{scrhack}
 % starting the document
 \begin{document}
 % set pagenumbering to roman(I II III IV)
@@ -130,7 +131,9 @@
 \lstlistoflistings
 \addcontentsline{toc}{chapter}{Listingverzeichnis}
 \newpage
+\glsaddall
 \printglossary
+\printglossary[type=\acronymtype] % prints just the list of acronyms
 \addcontentsline{toc}{chapter}{Glossar}
 \newpage
 \newcounter{romanCount}

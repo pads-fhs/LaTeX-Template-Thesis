@@ -1,10 +1,10 @@
 document:
 	pdflatex document
-	makeindex -s document.ist -t document.glg -o document.gls document.glo
+	makeglossaries document
 	bibtex document
 	pdflatex document
 	pdflatex document
 clean:
-	rm -f *.aux *.bbl *.blg *.lof *.lot *.log *.toc *.lol *.g* *.ist *.acn *.out
+	rm -f *.aux *.bbl *.blg *.lof *.lot *.log *.toc *.lol *.g* *.ist *.acn *.out *.acr *.alg
 cleaner: clean
 	rm -f *.pdf
