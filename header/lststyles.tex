@@ -15,6 +15,7 @@
         breaklines=true,
         language=console,
         breaklines=true,
+        rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
         commentstyle=\textit,
         keywordstyle=\bfseries,
         basicstyle=\ttfamily,
@@ -99,6 +100,7 @@
 %        alsoletter={<,>,-,!},
         morekeywords={div,section,header,footer,p,a},
         breaklines=true,
+        rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
         commentstyle=\textit\color{green},
         keywordstyle=\bfseries\color{violet},
         basicstyle=\ttfamily\color{black},
@@ -189,6 +191,7 @@
      language=JavaScript,
      %backgroundcolor=\color{lightgray},
      extendedchars=true,
+     rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
      basicstyle=\footnotesize\ttfamily,
      showstringspaces=false,
      showspaces=false,
@@ -256,10 +259,11 @@
 \newcommand{\lstsetfsharp}{
  \lstset{language=fsharp,
         breaklines=true,
-        commentstyle=\sffamily,
-        basicstyle=\sffamily,
-        keywordstyle=\bfseries,
-        stringstyle=\ttfamily,
+        rulesepcolor=\color{black},
+        commentstyle=\small\color{sh_comment}\textit,
+        keywordstyle=\small\color{sh_keyword}\bfseries,
+        basicstyle=\small\ttfamily,
+        stringstyle=\small\color{sh_string}\ttfamily,
         showstringspaces=false,
         frame=single,
         tabsize=2
