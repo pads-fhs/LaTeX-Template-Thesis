@@ -14,3 +14,4 @@ This is a latex template for master/ bachelor thesis or normal reports at FHS.
 * Vorlage für Tabellen eingebunden
 * **code** Umgebung zur besseren Platzierung von Quellcodelistings
 * **Code** Umgebung um Listings wie Bilder und Tabellen zu Platzieren
+* floatparameter geändert um Bilder und Tabellen besser zu Platzieren
