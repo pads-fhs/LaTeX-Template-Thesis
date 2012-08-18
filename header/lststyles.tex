@@ -15,6 +15,7 @@
         breaklines=true,
         %language=console,
         breaklines=true,
+        float=htpb,
         rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
         commentstyle=\small\color{sh_comment}\textit,
         keywordstyle=\small\color{blue}\bfseries,
@@ -117,6 +118,7 @@
 \newcommand{\lstsetphp}{
  \lstset{language=PHP,
         breaklines=true,
+        float=htpb,
         rulesepcolor=\color{black},
         commentstyle=\small\color{sh_comment}\textit,
         keywordstyle=\small\color{sh_keyword}\bfseries,
@@ -129,10 +131,22 @@
         %numbers=left, stepnumber=5, numbersep=10pt
  }
 }
-\lstnewenvironment{code}
-    {\lstset{}%
-      \csname lst@SetFirstLabel\endcsname}
-    {\csname lst@SaveFirstLabel\endcsname}
+%\lstnewenvironment{code}
+%    {\minipage{\linewidth}
+%    \lstset{}%
+%      \csname lst@SetFirstLabel\endcsname}
+%    {\csname lst@SaveFirstLabel\endcsname
+%    \endminipage}
+    
+    \lstnewenvironment{code}[1][]%
+      {\minipage{\linewidth} 
+       \lstset{commentstyle=\small\color{sh_comment}\textit,
+             keywordstyle=\small\color{sh_keyword}\bfseries,
+             basicstyle=\small\ttfamily,
+             stringstyle=\small\color{sh_string}\ttfamily,
+             frame=single,#1}}
+      {\endminipage}
+    
 \newcommand{\lstsethaskell}{
     \lstset{
       language=Haskell,
@@ -201,7 +215,7 @@
      tabsize=2,
      breaklines=true,
      showtabs=false,
-     captionpos=b
+     captionpos=t
   }
 }
 \lstdefinelanguage{CSharp}{

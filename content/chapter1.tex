@@ -4,7 +4,7 @@ bla test.\footnote{http://www.fh-schmalkalden.de}
 Das könnte \gls{zb} in einer arbeit stehen.
 
 \lstsethaskell
-\begin{lstlisting}[label=listinghaskell,caption=This is Haskell]
+\begin{code}[label=listinghaskell,caption=This is Haskell]
 module Main where
 
 -- this is a comment
@@ -16,27 +16,46 @@ main = do
   putStrLn "Hello World"
   putStrLn $ f 1.2 3
   print $ sum [1..10]
-\end{lstlisting}
+\end{code}
 
 \lstsetjava
-\begin{lstlisting}[label=listingjava,caption=This is \gls{glo:Java}]
+\begin{code}[label=listingjava,caption=This is \gls{glo:Java}]
 // Comment
 class Main {
   public static void main(String[] args) {
     System.out.println("Hello World");
   }
 }
-\end{lstlisting}
+\end{code}
 
 \lstsetscala
-\begin{lstlisting}[label=listingscala,caption=This is Scala]
+\begin{code}[label=listingscala,caption=This is Scala]
 // Comment
 class Main extends App {
   println("Hello World")
 }
-\end{lstlisting}
+\end{code}
+
+%place Code like normal floats
 \lstsetjavascript
-\lstinputlisting[caption={This is javascript}]{./listings/hello.js}
+\begin{Code}
+	\centering
+	\lstinputlisting[caption={This is javascript}]{./listings/hello.js}
+\end{Code}
+\lstsetphp
+\begin{code}[label=listingphp,caption={This is PHP}]
+<HTML>
+<HEAD>
+<TITLE> Hello World in PHP </TITLE>
+</HEAD>
+<BODY>
+<?
+// Hello world in PHP
+ print("Hello World");
+?>
+</BODY>
+</HTML>
+\end{code}
 
 \section{Formeln}
 

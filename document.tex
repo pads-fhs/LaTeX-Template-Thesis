@@ -34,8 +34,18 @@
 \usepackage{listings}
 \usepackage[numbers]{natbib}
 
+%--------------------------
+%custom floats
+\usepackage{float}
+\floatstyle{plain} % optionally change the style of the new float
+\newfloat{Code}{H}{myc}
+%--------------------------
 
+%--------------------------
+%Glossar
 \input{header/glossar}
+%--------------------------
+
 \bibliographystyle{alphadin}
 \usepackage[babel,german=quotes]{csquotes}
 \usepackage[bottom]{footmisc} %Damit Footnotes immer als Unterstes angezeigt werden, wenn man ein Abbildung mit [b]ottom platziert
