@@ -17,6 +17,8 @@ This is a latex template for master/ bachelor thesis or normal reports at FHS.
 * floatparameter geändert um Bilder und Tabellen besser zu Platzieren
 * hurenkinder & schusterjungen durch floatingparameter verboten
 
+# Vorschau
+
 [demo here]
 
 [demo here]:https://www.dropbox.com/s/4fu1nx1ynb5adlk/document.pdf
