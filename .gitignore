@@ -28,3 +28,7 @@ document.pdf
 *~
 *.acr
 *.alg
+*.fdb_latexmk
+*.fls
+*blx.bib
+*.run.xml

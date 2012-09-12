@@ -1,5 +1,7 @@
 % define documentclass
 \documentclass[12pt, bibliography=totoc, a4paper, abstracton, numbers=noenddot]{scrreprt}
+%compiler anweisung
+\nonstopmode
 % absatz abstand
 \parskip 12pt
 \parindent 0pt
@@ -32,7 +34,7 @@
 \usepackage{lmodern}
 %--------------------------
 \usepackage{listings}
-\usepackage[numbers]{natbib}
+
 
 %--------------------------
 %custom floats
@@ -46,9 +48,12 @@
 \input{header/glossar}
 %--------------------------
 
-\bibliographystyle{alphadin}
+%Literaturverzeichnis
+\usepackage[style=alphabetic-verb,backend=bibtex,natbib=true]{biblatex}
+%\bibliographystyle{alphadin}
 \usepackage[babel,german=quotes]{csquotes}
 \usepackage[bottom]{footmisc} %Damit Footnotes immer als Unterstes angezeigt werden, wenn man ein Abbildung mit [b]ottom platziert
+\bibliography{bibliography}
 
 \usepackage{lastpage}
 
@@ -174,7 +179,7 @@
 % #####
 
 
-\bibliography{bibliography}
+\printbibliography
 \input{header/fancyRegisterPart}
 \pagenumbering{Roman}
 \setcounter{page}{\value{romanCount}}
