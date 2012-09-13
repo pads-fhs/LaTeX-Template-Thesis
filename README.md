@@ -16,7 +16,15 @@ This is a latex template for master/ bachelor thesis or normal reports at FHS.
 * **Code** Umgebung um Listings wie Bilder und Tabellen zu Platzieren
 * floatparameter geändert um Bilder und Tabellen besser zu Platzieren
 * hurenkinder & schusterjungen durch floatingparameter verboten
+* Buildkommando der Makefile auf einen Befehl reduziert
+* Statt BibTeX wird BibLaTeX benutzt
+* Beispiel für Zitieren von Onlinequellen
 
+# Dokument erstellen
+## Variante 1
+make
+## Variante 2
+latexmk -pdf -pdflatex="pdflatex -synctex=1 %O %S" "document"
 # Vorschau
 
 [demo here]
