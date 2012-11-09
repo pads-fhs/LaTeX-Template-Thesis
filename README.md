@@ -21,12 +21,21 @@ This is a latex template for master/ bachelor thesis or normal reports at FHS.
 * Beispiel für Zitieren von Onlinequellen
 
 # Dokument erstellen
+## Empfohlene Tex Distribution
+[TeX Live]
+
 ## Variante 1
 make
+
 ## Variante 2
 latexmk -pdf -pdflatex="pdflatex -synctex=1 %O %S" "document"
-# Vorschau
 
+# Vorschau
 [demo here]
 
+# Benutzung
+* in der Datei **Document.tex** die eigenen Daten eintragen
+* eigene Inhalte werden im Ordner *content* platziert und im hauptdokument mit dem befehl *\input{./content/eigenes-dokument.tex}* eingebunden
+
 [demo here]:https://www.dropbox.com/s/4fu1nx1ynb5adlk/document.pdf
+[TeX Live]: https://www.tug.org/texlive/
