@@ -1,4 +1,4 @@
-\usepackage{listings}
+\usepackage{listingsutf8}
 %colors
 \definecolor{sh_comment}{rgb}{0.12, 0.38, 0.18 } %adjusted, in Eclipse: {0.25, 0.42, 0.30 } = #3F6A4D
 \definecolor{sh_keyword}{rgb}{0.37, 0.08, 0.25}  % #5F1441
@@ -141,6 +141,7 @@
     \lstnewenvironment{code}[1][]%
       {\minipage{\linewidth} 
        \lstset{
+       inputencoding=utf8/latin1,
              rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
              commentstyle=\small\color{sh_comment}\textit,
              keywordstyle=\small\color{sh_keyword}\bfseries,
