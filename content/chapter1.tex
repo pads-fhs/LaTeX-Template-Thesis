@@ -1,7 +1,7 @@
 \chapter{Chapter eins}
 bla test.\footnote{http://www.fh-schmalkalden.de}
 
-Das könnte \gls{zb} in einer arbeit stehen.
+%Das könnte \gls{zb} in einer arbeit stehen.
 
 \lstsethaskell
 \begin{code}[label=listinghaskell,caption=This is Haskell]
@@ -18,7 +18,7 @@ main = do
   print $ sum [1..10]
 \end{code}
 
-Als nächstes kommt \gls{glo:Java}.
+Als nächstes kommt Java.%\gls{glo:Java}.
 
 \lstsetjava
 \begin{code}[label=listingjava,caption={This is Java}]
@@ -81,5 +81,5 @@ one more page
 one more page
 
 \section{hans wurst3}
-one more page \footcites(Vgl.)(){braun:scala,fab:vorlage}
+one more page \autocite[Vgl.][]{braun:scala,fab:vorlage}
 

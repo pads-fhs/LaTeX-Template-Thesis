@@ -1,3 +1,4 @@
+
 % define documentclass
 \documentclass[12pt, bibliography=totoc, a4paper, abstracton, numbers=noenddot]{scrreprt}
 %compiler anweisung
@@ -24,9 +25,11 @@
 \setcapindent{1em}
 % define used packages
 \usepackage[left=4.0cm, right=2.0cm, top=3cm, bottom=3cm]{geometry}
-\usepackage{bibgerm}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+
+\usepackage{fixltx2e}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
 %--------------------------
@@ -45,17 +48,30 @@
 
 %--------------------------
 %Glossar
-\input{header/glossar}
+%\input{header/glossar}
 %--------------------------
 
 %Literaturverzeichnis
-\usepackage[style=alphabetic-verb,backend=bibtex,natbib=true]{biblatex}
-%\bibliographystyle{alphadin}
-\usepackage[babel,german=quotes]{csquotes}
-\usepackage[bottom]{footmisc} %Damit Footnotes immer als Unterstes angezeigt werden, wenn man ein Abbildung mit [b]ottom platziert
-\bibliography{bibliography}
+\usepackage[autostyle]{csquotes}
+\usepackage[style=alphabetic-verb,backend=bibtexu,autocite=footnote,bibencoding=utf8,natbib=true]{biblatex}
+\setlength{\bibitemsep}{1em}     % Abstand zwischen den Literaturangaben
+\setlength{\bibhang}{2em} 
+\defcounter{biburlnumpenalty}{3000}
+\defcounter{biburlucpenalty}{6000}
+\defcounter{biburllcpenalty}{9000}
 
-\usepackage{lastpage}
+\addbibresource{bibliography.bib}
+
+\usepackage[bottom]{footmisc} %Damit Footnotes immer als Unterstes angezeigt werden, wenn man ein Abbildung mit [b]ottom platziert
+
+%Fußnoten einrücken
+\deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+
+%Fußnotencounter anpassen um durchgängig zu nummerieren
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+%\usepackage{lastpage}
 
 % advanced tables
 \usepackage{array}
@@ -154,10 +170,10 @@
 \addcontentsline{toc}{chapter}{Listingverzeichnis}
 \newpage
 %\glsaddall
-\printglossary
-\printglossary[type=\acronymtype] % prints just the list of acronyms
-\addcontentsline{toc}{chapter}{Glossar}
-\newpage
+%\printglossary
+%\printglossary[type=\acronymtype] % prints just the list of acronyms
+%\addcontentsline{toc}{chapter}{Glossar}
+%\newpage
 \newcounter{romanCount}
 \setcounter{romanCount}{\value{page}}
 % set pagenumbering to arabic(1 2 3 4)
