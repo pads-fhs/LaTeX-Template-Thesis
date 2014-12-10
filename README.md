@@ -40,6 +40,6 @@ latexmk -xelatex -latexoption="-synctex=1 %O %S" "document"
 * in der Datei **document.tex** die eigenen Daten eintragen
 * eigene Inhalte werden im Ordner *content* platziert und im hauptdokument mit dem befehl *\input{./content/eigenes-dokument.tex}* eingebunden
 
-[demo here]:https://www.dropbox.com/s/4fu1nx1ynb5adlk/document.pdf
+[demo here]:https://github.com/P1tt187/LaTeX-Template-Thesis/releases/latest
 [TeX Live]: https://www.tug.org/texlive/
 [TeXstudio]: http://texstudio.sourceforge.net/
