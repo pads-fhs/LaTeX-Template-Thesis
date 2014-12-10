@@ -14,3 +14,7 @@ push @generated_exts, 'glo', 'gls', 'glg';
 push @generated_exts, 'acn', 'acr', 'alg';
 $clean_ext .= ' %R.ist %R.xdy';
 
+$bib_program = 'bibtex';
+    if ( exists $generated_log{"$bbl_base.bcf"} ) {
+        $bib_program = 'biber';
+}
